@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription - École EVA</title>
+    <link rel="stylesheet" href="/Home/indexstyles.css">
+    <link rel="stylesheet" href="contactstyles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/Images/logo.png">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            color: var(--blue);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1.school__title {
+            text-align: center;
+            color: var(--darkblue);
+            font-size: 2rem;
+        }
+
+        form {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--blue);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--lightblue);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group-half {
+            display: inline-block;
+            width: 48%;
+            margin-right: 2%;
+        }
+
+        .form-group-half:last-child {
+            margin-right: 0;
+        }
+
+        button {
+            background-color: var(--lightblue);
+            color: white;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--blue);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header__container">
+        <!-- Same header as other pages -->
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="school__title">Formulaire d'inscription</h1>
+            <form action="send_application.php" method="post">
+                <!-- Nom et Prénom -->
+                <div class="form-group">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom">Prénom(s) de l'enfant :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+
+                <!-- Date et lieu de naissance -->
+                <div class="form-group-half">
+                    <label for="date_naissance">Date de naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+                </div>
+
+                <div class="form-group-half">
+                    <label for="lieu_naissance">Lieu de naissance :</label>
+                    <input type="text" id="lieu_naissance" name="lieu_naissance" required>
+                </div>
+
+                <!-- Nationalité -->
+                <div class="form-group">
+                    <label for="nationalite">Nationalité :</label>
+                    <input type="text" id="nationalite" name="nationalite" required>
+                </div>
+
+                <!-- Information sur le père -->
+                <div class="form-group">
+                    <label for="prenom_pere">Prénom du père :</label>
+                    <input type="text" id="prenom_pere" name="prenom_pere" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profession_pere">Profession du père :</label>
+                    <input type="text" id="profession_pere" name="profession_pere" required>
+                </div>
+
+                <!-- Information sur la mère -->
+                <div class="form-group">
+                    <label for="prenom_mere">Prénom de la mère :</label>
+                    <input type="text" id="prenom_mere" name="prenom_mere" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="profession_mere">Profession de la mère :</label>
+                    <input type="text" id="profession_mere" name="profession_mere" required>
+                </div>
+
+                <!-- Répondant financier -->
+                <div class="form-group">
+                    <label for="repondant_financier">Répondant financier :</label>
+                    <input type="text" id="repondant_financier" name="repondant_financier" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+
+                <!-- Numéros de contact -->
+                <div class="form-group-half">
+                    <label for="tel_domicile">Tel. Domicile :</label>
+                    <input type="tel" id="tel_domicile" name="tel_domicile" required>
+                </div>
+
+                <div class="form-group-half">
+                    <label for="tel_portable">Tel. Portable :</label>
+                    <input type="tel" id="tel_portable" name="tel_portable" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="boite_postale">Boîte Postale :</label>
+                    <input type="text" id="boite_postale" name="boite_postale" required>
+                </div>
+
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <!-- Same footer as other pages -->
+    </footer>
+
+    <!-- Optional WhatsApp chat button -->
+    <div class="whatsapp-chat-button">
+        <a href="https://wa.me/221771789860" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <p>Discutez avec nous !</p>
+        </a>
+    </div>
+</body>
+
+</html>
