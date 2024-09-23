@@ -12,50 +12,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="/Images/logo.png">
+    <link rel="icon" href="/Images/eva_logo.jpg">
 </head>
 
 <body class="container">
-    <header class="header__container">
-        <div class="topheader">
-            <div class="topheader__left">
-                <div class="header__location">
-                    <i id="emailiconheader" class="uil uil-fast-mail-alt"></i>
-                    <h4 class="topheader__text">evaschool@yahoo.fr</h4>
-                </div>
-                <div class="header__location">
-                    <i id="calliconheader" class="uil uil-outgoing-call"></i>
-                    <h4 class="topheader__text">+221 77 178 98 60</h4>
-                </div>
-            </div>
-            <div class="topheader__center">
-                <h1>École EVA Dakar</h1>
-            </div>
-            <div class="topheader__right">
-                <div class="header__location">
-                    <i id="locationiconheader" class="uil uil-location-point"></i>
-                    <h4 class="topheader__text">Ouest-Foire, Villa n°12, Dakar</h4>
-                </div>
-                <div class="header__location">
-                    <i id="locationiconheader" class="uil uil-clock"></i>
-                    <h4 id="hours" class="topheader__text">Fermé ⋅ Ouvre à 7h30 Lun</h4>
-                </div>
-            </div>
+    <nav>
+        <div class="nav__container">
+            <a style="color: var(--blue);" href="/home/"><h1>EVA School Dakar</h1></a>
+            <ul class="nav__menu">
+                <li><a href="/home/">Accueil</a></li>
+                <li><a href="/about/">À Propos</a></li>
+                <li><a href="/apply/">Appliquer</a></li>
+                <li><a href="/contact/">Contacter</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
-        <div class="bottomheader">
-            <nav class="navbar">
-                <a class="navhome" href="/home/">Accueil</a>
-                <a class="navabout" href="/about/">À propos</a>
-                <a class="navprojectsmall" href="/howtohelp/">Contacter</a>
-                <a class="navhelp" href="/howtohelp/">Contacter</a>
-                <a class="navwhat" href="https://rosariosis.smzedu.com">Système scolaire en ligne</a>
-            </nav>
-        </div>
+    </nav>
         <div class="header__showcase">
             <img class="header__image" src="/Images/contact_cover.jpg" alt="image de contact">
             <h1 class="header__showcase-text">Contactez-nous</h1>
         </div>
-    </header>
 
     <main>
         <section class="contact__section">
@@ -69,19 +46,20 @@
                     <p>Horaires : Lundi à Vendredi, 7h30 - 17h00</p>
                 </div>
                 <div class="contact__form">
-                    <form action="/submitContactForm" method="post">
-                        <label for="name">Votre Nom :</label>
+                    <form action="submitContactForm.php" method="post">
+                        <label for="name">Votre Nom : <br> <br</label>
                         <input class="textinput" type="text" id="name" name="name" required>
-
-                        <label for="email">Votre Email :</label>
-                        <input class="textinput type="email" id="email" name="email" required>
-
-                        <label for="message">Message :</label>
-                        <textarea class="textinput id="message" name="message" rows="5" required></textarea>
-
+                    
+                        <label for="email">Votre Email : <br> <br</label>
+                        <input class="textinput" type="email" id="email" name="email" required>
+                    
+                        <label for="message">Message : <br> <br</label>
+                        <textarea class="textinput" id="message" name="message" rows="5" required></textarea>
+                    
                         <button type="submit" class="contact__button">Envoyer</button>
-                    </form>
+                    </form>                    
                 </div>
+                <h2 style="text-align: center;">Si vous ne recevez pas de réponse, veuillez nous appeler.</h2>
             </div>
         </section>
     </main>
@@ -99,12 +77,12 @@
                 </address>
             </div>
             <div class="footer-col quick-links">
-                <h4>Quick Links</h4>
+                <h4>Links Rapidés</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="#">Contacter</a></li>
+                    <li><a href="#">Appliquer</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -122,22 +100,13 @@
                 <h4>Vie Campus</h4>
                 <ul>
                     <li><a href="#">Accessibilité</a></li>
-                    <li><a href="#">Aide Financière</a></li>
                     <li><a href="#">Services Alimentaires</a></li>
                     <li><a href="#">Logement</a></li>
                     <li><a href="#">Technologies de l'Information</a></li>
                     <li><a href="#">Vie Étudiante</a></li>
                 </ul>
             </div>
-            <div class="footer-col follow-us">
-                <h4>Follow Us</h4>
-                <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                </ul>
-            </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> École EVA Dakar. All rights reserved. Developed & Maintained by <a style="color: aliceblue;" href="https://www.smzedu.com">SMZ Education</a></p>
@@ -154,13 +123,34 @@
     </footer>
 
     <div class="whatsapp-chat-button">
-        <a href="https://wa.me/221771789860" target="_blank">
+        <a href="https://wa.me/221339355619" target="_blank">
             <div class="whatsapp-container">
                 <i class="fab fa-whatsapp"></i>
-                <p>Discutez avec nous !</p>
+                <p>Discutez avec nous!</p>
             </div>
         </a>
     </div>
+    <script src="schoolHours.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const navMenu = document.querySelector('.nav__menu');
+
+        openMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = 'flex'; // Show the menu
+            openMenuBtn.style.display = 'none'; // Hide the open button
+            closeMenuBtn.style.display = 'inline-block'; // Show the close button
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = 'none'; // Hide the menu
+            openMenuBtn.style.display = 'inline-block'; // Show the open button
+            closeMenuBtn.style.display = 'none'; // Hide the close button
+        });
+    });
+
+    </script>
 </body>
 
 </html>

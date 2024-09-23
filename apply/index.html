@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription - École EVA</title>
     <link rel="stylesheet" href="/Home/indexstyles.css">
-    <link rel="stylesheet" href="contactstyles.css">
+    <link rel="stylesheet" href="helpstyles.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="/Images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="shortcut icon" href="/Images/eva_logo.jpg" type="image/x-icon">
     <style>
         /* General Styles */
         body {
@@ -91,16 +92,33 @@
     </style>
 </head>
 
-<body>
-    <header class="header__container">
-        <!-- Same header as other pages -->
-    </header>
+<body class="">
+    <nav>
+        <div class="nav__container">
+            <a style="color: var(--blue);" href="/home/"><h1>EVA School Dakar</h1></a>
+            <ul class="nav__menu">
+                <li><a href="/home/">Accueil</a></li>
+                <li><a href="/about/">À Propos</a></li>
+                <li><a href="/apply/">Appliquer</a></li>
+                <li><a href="/contact/">Contacter</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+        <div class="header__showcase">
+            <img class="header__image" src="/Images/contact_cover.jpg" alt="image de contact">
+            <h1 class="header__showcase-text">Contactez-nous</h1>
+        </div>
 
     <main>
         <div class="container">
+            <br>
+            <br>
+            <br>
             <h1 class="school__title">Formulaire d'inscription</h1>
-            <form action="send_application.php" method="post">
-                <!-- Nom et Prénom -->
+                <form action="/apply/send_application.php" method="post">
+                    <!-- Nom et Prénom -->
                 <div class="form-group">
                     <label for="nom">Nom :</label>
                     <input type="text" id="nom" name="nom" required>
@@ -176,23 +194,99 @@
                     <label for="boite_postale">Boîte Postale :</label>
                     <input type="text" id="boite_postale" name="boite_postale" required>
                 </div>
-
-                <button type="submit">Soumettre</button>
+                    <button type="submit">Soumettre</button>
             </form>
+            <h2 style="text-align: center;">Si vous ne recevez pas de réponse, veuillez nous appeler.</h2>
         </div>
     </main>
 
-    <footer class="footer">
-        <!-- Same footer as other pages -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer_container">
+            <div class="footer-col">
+                <h4>École EVA Dakar</h4>
+                <address>
+                    Ouest-Foire<br>
+                    Villa n°12<br>
+                    Dakar<br>
+                    +221 77 178 98 60<br>
+                    <a style="text-decoration: none; color: aliceblue;" href="mailto:evaschool@yahoo.fr">evaschool@yahoo.fr</a>
+                </address>
+            </div>
+            <div class="footer-col quick-links">
+                <h4>Links Rapidés</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="#">Contacter</a></li>
+                    <li><a href="#">Appliquer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Notre Campus</h4>
+                <ul>
+                    <li><a href="#">Académique</a></li>
+                    <li><a href="#">Planification & Administration</a></li>
+                    <li><a href="#">Sécurité du Campus</a></li>
+                    <li><a href="#">Bureau du Chancelier</a></li>
+                    <li><a href="#">Services des Installations</a></li>
+                    <li><a href="#">Ressources Humaines</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Vie Campus</h4>
+                <ul>
+                    <li><a href="#">Accessibilité</a></li>
+                    <li><a href="#">Services Alimentaires</a></li>
+                    <li><a href="#">Logement</a></li>
+                    <li><a href="#">Technologies de l'Information</a></li>
+                    <li><a href="#">Vie Étudiante</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> École EVA Dakar. All rights reserved. Developed & Maintained by <a style="color: aliceblue;" href="https://www.smzedu.com">SMZ Education</a></p>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-skype"></i></a>
+                <a href="#"><i class="fab fa-xing"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Optional WhatsApp chat button -->
     <div class="whatsapp-chat-button">
-        <a href="https://wa.me/221771789860" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <p>Discutez avec nous !</p>
+        <a href="https://wa.me/221339355619" target="_blank">
+            <div class="whatsapp-container">
+                <i class="fab fa-whatsapp"></i>
+                <p>Discutez avec nous!</p>
+            </div>
         </a>
     </div>
+    <script src="schoolHours.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const navMenu = document.querySelector('.nav__menu');
+
+        openMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = 'flex'; // Show the menu
+            openMenuBtn.style.display = 'none'; // Hide the open button
+            closeMenuBtn.style.display = 'inline-block'; // Show the close button
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            navMenu.style.display = 'none'; // Hide the menu
+            openMenuBtn.style.display = 'inline-block'; // Show the open button
+            closeMenuBtn.style.display = 'none'; // Hide the close button
+        });
+    });
+
+    </script>
 </body>
 
 </html>
