@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription - École EVA</title>
-    <link rel="stylesheet" href="/Home/indexstyles.css">
+    <link rel="stylesheet" href="/home/indexstyles.css">
     <link rel="stylesheet" href="helpstyles.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +78,7 @@
         button {
             background-color: var(--lightblue);
             color: white;
-            padding: 1rem;
+            padding: 0.8rem;
             font-size: 1.1rem;
             border: none;
             border-radius: 6px;
@@ -89,25 +89,67 @@
         button:hover {
             background-color: var(--blue);
         }
+
+        .rules-button {
+            background-color: red;
+            margin-bottom: 0.5rem;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: left;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta name="description" content="École EVA à Dakar offre une éducation préscolaire et primaire exceptionnelle. Inscrivez votre enfant dans notre établissement pour un avenir brillant et plein de succès.">
+    <meta name="keywords" content="École EVA, Dakar, éducation, école, Sénégal, Accueil">
+    <meta name="author" contentblack="École EVA Dakar">
+
+    <meta property="og:title" content="Formulaire d'Inscription - École EVA Dalar">
+    <meta property="og:description" content="Découvrez le formulaire d'Inscription de l'École EVA Dakar, un établissement éducatif de premier plan offrant une éducation moderne et de qualité à Dakar.">
+    <meta property="og:image" content="/Images/Poster.jpg">
+    <meta property="og:url" content="https://evaschooldakar.smzedu.com">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "École EVA Dakar",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Villa n°12 Ouest-Foire",
+            "addressLocality": "Dakar",
+            "addressCountry": "SN"
+          },
+          "telephone": "+221 77 178 98 60",
+          "email": "evaschool@yahoo.fr",
+          "url": "https://evaschooldakar.smzedu.com"
+        }
+        </script>
+        
 </head>
 
 <body class="">
     <nav>
         <div class="nav__container">
-            <a style="color: var(--blue);" href="/home/"><h1>EVA School Dakar</h1></a>
+            <a href="/home/" style="display: flex; align-items: center;">
+                <h1 style="color: var(--darkblue); margin: 0; font-size: 2rem;">EVA School Dakar</h1>
+            </a>
             <ul class="nav__menu">
-                <li><a href="/home/">Accueil</a></li>
-                <li><a href="/about/">À Propos</a></li>
-                <li><a href="/apply/">Appliquer</a></li>
-                <li><a href="/contact/">Contacter</a></li>
+                <li><a style="font-weight: 700;" href="/home/">Accueil</a></li>
+                <li><a style="font-weight: 700;" href="/about/">À Propos</a></li>
+                <li><a style="font-weight: 700;" href="/apply/">Formulaire</a></li>
+                <li><a style="font-weight: 700;" href="/contact/">Contacter</a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
         </div>
     </nav>
         <div class="header__showcase">
-            <img class="header__image" src="/Images/contact_cover.jpg" alt="image de contact">
+            <img class="header__image" src="/Images/contact_cover.jpg" alt="">
             <h1 class="header__showcase-text">Contactez-nous</h1>
         </div>
 
@@ -194,9 +236,19 @@
                     <label for="boite_postale">Boîte Postale :</label>
                     <input type="text" id="boite_postale" name="boite_postale" required>
                 </div>
-                    <button type="submit">Soumettre</button>
+
+                <button class="rules-button" type="button" onclick="downloadPDF()">Règles et tarifs</button>
+                
+                <!-- Checkbox -->
+                <div class="checkbox-container">
+                    <label for="rulesCheck">J'ai lu les règles et les tarifs, je comprends ma responsabilité.</label>
+                    <input type="checkbox" id="rulesCheck" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Soumettre</button>
             </form>
-            <h2 style="text-align: center;">Si vous ne recevez pas de réponse, veuillez nous appeler.</h2>
+            <h2 style="margin-top: 1rem; text-align: center;">Si vous ne recevez pas de réponse, veuillez nous appeler.</h2>
         </div>
     </main>
 
@@ -213,12 +265,13 @@
                 </address>
             </div>
             <div class="footer-col quick-links">
-                <h4>Links Rapidés</h4>
+                <h4>Links Rapides</h4>
                 <ul>
                     <li><a href="#">Accueil</a></li>
                     <li><a href="#">À Propos</a></li>
                     <li><a href="#">Contacter</a></li>
                     <li><a href="#">Appliquer</a></li>
+                    <li><a href="https://m.facebook.com/100092267402801/">Facebook</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -247,13 +300,8 @@
         <div class="footer-bottom">
             <p>&copy; <span id="current-year"></span> École EVA Dakar. All rights reserved. Developed & Maintained by <a style="color: aliceblue;" href="https://www.smzedu.com">SMZ Education</a></p>
             <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-skype"></i></a>
-                <a href="#"><i class="fab fa-xing"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://m.facebook.com/100092267402801/"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/smzedu/"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
@@ -286,6 +334,11 @@
         });
     });
 
+    </script>
+    <script>
+        function downloadPDF() {
+            window.open('/Images/Information.pdf', '_blank');
+        }
     </script>
 </body>
 
